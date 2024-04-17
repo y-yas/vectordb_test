@@ -7,7 +7,7 @@ services:
     volumes:
       - ./data:/work
     ports:
-      - "80:8888"
+      - "8888:8888"
     command:
       jupyter-lab --ip 0.0.0.0 --allow-root -b localhost --NotebookApp.token=''
 
