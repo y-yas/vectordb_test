@@ -10,6 +10,6 @@ ENV POSTGRES_PASSWORD postgres
 ENV POSTGRES_DB postgres
 
 EXPOSE 5432
-RUN cd /tmp && git clone --branch v0.5.1 https://github.com/pgvector/pgvector.git && \
-RUN cd pgvector && make && make install
+RUN cd /tmp && git clone --branch v0.5.1 https://github.com/pgvector/pgvector.git
+RUN cd /tmp/pgvector && make && make install
     #cd ../ && rm -rf pgvector
