@@ -14,12 +14,12 @@ services:
   pgdb:
     build: ./pgvector
     image: postgres:latest
-      #context: ./pgvector
     container_name: pgdb
     ports:
       - "5432:5432"
     volumes:
       - ./pgvector/data:/var/lib/postgresql/data
       - ./pgvector/extension/vector_extension.sql:/docker-entrypoint-initdb.d/0-vector_extension.sql
-        #- ./pgvector/init:/docker-entrypoint-initdb.d
+    environment:
+      POSTGRES_PASSWORD: postgres
     restart: always

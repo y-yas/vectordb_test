@@ -1,7 +1,7 @@
--- extension有効化
+-- enable extension
 CREATE EXTENSION IF NOT EXISTS vector;
 
--- table作成
+-- create table
 CREATE TABLE is (id bigserial PRIMARY KEY, embedding vector(3));
 
 -- Data Insert
